@@ -1,9 +1,8 @@
+import React from 'react';
 import logo from '../../resources/logo.svg';
-import classes from './app.scss';
+import './app.scss';
 
 export const App = () => {
-  console.log('classes', classes);
-  
   return (
     <div className="app">
       <header className="app-header">
