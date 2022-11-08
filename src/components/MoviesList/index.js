@@ -26,7 +26,7 @@ export const MoviesList = () => {
   return (
     <section className="movies">
       <div className="titleAndFilters">
-        <h2>Top Rated Movies</h2>
+        <h2>Movies</h2>
         <SortAndFilters sortBy={sortBy} sortElement={sortElement} filterGenre={filterGenre} />
       </div>
       {

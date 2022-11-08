@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Bootstraped from Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
-
+To start the project, run the following command:
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+&nbsp;
+&nbsp;
+&nbsp;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About the app
 
-### `npm test`
+The total time of development is about 16h.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Of course, there are a few things I missed due to time constraints: write tests, implement with typescript, a hook that will handle the API requests better (handle errors etc.), better search functionality (autosuggestions while typing, search details page).
 
-### `npm run build`
+Homepage:
+I chose to show the popular movies (default / first page). 
+Taking in consideration that the API does not have an option to receive all the movies, the requierment about "all movies" couldn't be followed. However, I can also think of a solution to do multiple requests, but the API returns around 500 pages (~10 k movies) and I am not sure that this was the wanted functionality.
+The movies shown can be sorted descending and ascending by rating and release date and also can be filtered by genre.
+The search is doing a request to the API with the search term and shows the results. When you click on the movie in the search, you will be redirected to the details page for that movie. Here I would have probably also use an autosuggestions as we type the string and maybe also a search page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Details Page:
+The details page will show information collected from the API for individual movie request based on the id in the route (param).
+For each movie you have the possibility to add your own rating. This rating is stored in localStorage, this means that it will be available after a refresh of the page as well.
+The similar movies section is fetching data based on the id of the movie that we show in the details page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Specs:
+I do not have experience with D3.js, I heard about it before but that's it.
+It was a good exercise to implement the top 10 rated movies. The graphs are custom made. Probably if we would need different data types, then will have to be re-engineered.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+In conclusion, it was a challenge to do it in a short time and there are a few things that will need improvements. Also, useMemo and useCallback can be used, but I noticed in the last few projects that is kind of arbitrary and for those hooks to add real improvements in performance a more comprehensive impact testing and debugging are needed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you!
