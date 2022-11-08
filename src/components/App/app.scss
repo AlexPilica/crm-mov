@@ -1,3 +1,85 @@
-.app {
-  text-align: center;
+@use '../../styles/base';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: base.$fontFamily;
+  font-size: base.$fontSize;
+  font-weight: 400;
+  line-height: 1.5;
+  color: base.$text;
+  background: base.$background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  display: inline-block;
+  color: base.$text;
+  text-decoration: none;
+
+  transition: 0.3s opacity ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+  &:not(.noDecoration) {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(5px);
+      height: 1px;
+      width: 100%;
+      background: transparent;
+
+      transition: 0.3s transform ease, 0.3s background ease-out;
+    }
+    &:hover:after {
+      background: base.$text;
+      transform: translateY(0);
+    }
+  }
+}
+
+.maxLayoutWidth {
+  width: 100%;
+  max-width: base.$maxLayoutWidth;
+  margin-left: auto;
+  margin-right: auto;
+}
+.layoutXPadding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.layoutYPadding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.minHeightContent {
+  min-height: calc(100vh - 132px);
+
+  &.layoutYPadding {
+    min-height: calc(100vh - 232px);
+  }
+}
+
+h1, 
+h2 {
+  margin: 0 0 15px;
+}
+h3, 
+h4 {
+  margin: 0 0 10px;
+} 
+h5, 
+h6 {
+  margin: 0 0 5px;
 }

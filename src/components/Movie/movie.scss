@@ -1,0 +1,53 @@
+@use '../../styles/base';
+
+.movieLink {
+  display: block;
+}
+.movieImage {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  box-shadow: 0 4px 10px rgba(base.$dark, 0.5);
+}
+.movieImageWrapper {
+  position: relative;
+}
+.movieTitle {
+  margin: 0;
+
+  @media screen and (min-width: base.$smallDesktopBreakpoint) {
+    font-size: 1.25rem;
+  }
+}
+.movieGenres {
+  font-size: 0.75rem;
+  margin: 0;
+
+  @media screen and (min-width: base.$smallDesktopBreakpoint) {
+    font-size: 0.875rem;
+  }
+}
+.rating {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(base.$dark, 0.25);
+  background: base.$primary;
+}
+.releaseDate {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  font-weight: 600;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  padding: 2px 10px 3px;
+  background: base.$primary;
+}

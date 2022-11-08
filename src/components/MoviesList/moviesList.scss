@@ -1,0 +1,43 @@
+@use '../../styles/base';
+
+.list {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15px;
+  row-gap: 20px;
+  justify-items: stretch;
+
+  @media screen and (min-width: base.$largeMobileBreakpoint) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (min-width: base.$smallDesktopBreakpoint) {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 25px;
+    row-gap: 35px;
+  }
+}
+
+.titleAndFilters {
+  margin-bottom: 25px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  @media screen and (min-width: base.$smallDesktopBreakpoint) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      padding-top: 15px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+  }
+}
+.moviesShownCount {
+  text-align: center;
+}

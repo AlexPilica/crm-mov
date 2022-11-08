@@ -1,0 +1,40 @@
+@use '../../styles/base';
+
+.barChartWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 0 40px;
+
+  &Inner {
+    width: 900px;
+
+    @media screen and (min-width: base.$smallDesktopBreakpoint) {
+      width: 1000px;
+    }
+
+    @media screen and (min-width: base.$desktopBreakpoint) {
+      width: 100%;
+    }
+  }
+}
+
+.barChart {
+  max-width: 100%;
+  
+  > g > g:first-child .tick {
+    display: none;
+  }
+  .tick,
+  .labelText,
+  .barLabel {
+    font-size: 1.25rem;
+
+    @media screen and (min-width: base.$smallDesktopBreakpoint) {
+      font-size: 1.125rem;
+    }
+    
+    @media screen and (min-width: base.$desktopBreakpoint) {
+      font-size: 1rem;
+    }
+  }
+}

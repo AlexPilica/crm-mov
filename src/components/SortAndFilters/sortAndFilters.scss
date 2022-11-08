@@ -1,0 +1,24 @@
+@use '../../styles/base';
+
+.filters {
+  // display: flex;
+  @media screen and (min-width: base.$smallDesktopBreakpoint) {
+    display: flex;
+  }
+}
+.filter {
+  margin-bottom: 10px;
+  text-align: right;
+
+  select {
+    min-width: 50%;
+  }
+  @media screen and (min-width: base.$smallDesktopBreakpoint) {
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+}
+.filterLabel {
+  margin-right: 10px;
+}

@@ -1,13 +1,12 @@
 @use '../../styles/base';
 
-.header {
-  padding: 10px 0;
+.footer {
+  padding: 10px 15px;
   background: base.$backgroundSecondary;
 }
-.headerInner {
+.footerInner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
   margin: 0 auto;
 }

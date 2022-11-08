@@ -1,22 +1,17 @@
 import React from 'react';
-import logo from '../../resources/logo.svg';
+import { Link } from 'react-router-dom';
+
+import { Logo } from '../Logo';
+import { Menu } from '../Menu';
 import './header.scss';
 
 export const Header = () => {
   return (
-    <header className="app-header">
-      <img src={logo} className="app-logo" alt="logo" />
-      <p>
-        Edit <code>src/components/App/app.js</code> and save to reload.
-      </p>
-      <a
-        className="app-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+    <header className="header">
+      <div className="headerInner maxLayoutWidth">
+        <Logo />
+        <Menu />
+      </div>
     </header>
   );
 };

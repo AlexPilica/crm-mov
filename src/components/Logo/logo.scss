@@ -1,0 +1,35 @@
+@use '../../styles/base';
+
+.logoLink {
+  display: block;
+  transition: 0.3s opacity ease;
+
+  &:hover {
+    opacity: 0.75;
+
+    .logoWrapper > span {
+      color: base.$text;
+    }
+  }
+}
+.logoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 46px;
+
+  > span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: base.$primary;
+
+    transition: 0.3s color ease;
+  }
+}
+.logoImg {
+  display: block;
+  max-width: 40px;
+  margin: 0 10px 0 0;
+}

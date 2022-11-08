@@ -1,0 +1,20 @@
+@use '../../styles/base';
+
+.relatedMoviesList {
+  display: grid;
+  max-width: 100%;
+  justify-items: stretch;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+
+  @media screen and (min-width: base.$largeMobileBreakpoint) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (min-width: base.$smallDesktopBreakpoint) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media screen and (min-width: base.$desktopBreakpoint) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}

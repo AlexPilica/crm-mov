@@ -1,0 +1,20 @@
+$dark: #000000;
+$background: #1A1A1E;
+$backgroundSecondary: #2C2C2C;
+$text: #fff;
+$primary: #ffb55a;
+
+$fontFamily: 'Montserrat', sans-serif;
+$fontSize: 0.875rem;
+
+$maxLayoutWidth: 1280px;
+
+$largeMobileBreakpoint: 480px;
+$smallDesktopBreakpoint: 769px;
+$desktopBreakpoint: 1025px;
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
