@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 To start the project, run the following command:
+### `npm install`
 ### `npm start`
 
 &nbsp;

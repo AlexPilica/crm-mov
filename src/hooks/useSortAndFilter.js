@@ -32,7 +32,7 @@ export const useSortAndFilter = ({ movies, sortElement }) => {
     } else {
       setMoviesToShow(movies?.filter(movie => movie.genre_ids.includes(parseInt(e.target.value))));
     }
-    sortElement.current.value = 'rating_descending';
+    sortElement.current.value = 'none';
   };
 
   return {
